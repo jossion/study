@@ -18,7 +18,7 @@ func main() {
 	fmt.Print(result)
 	//求平方
 	result = Filterslice(arr, func(v float64) string {
-		v = math.Pow(v,2)
+		v = math.Pow(v)
 		return fmt.Sprintf("%.2f", v)
 	})
 	fmt.Print(result)

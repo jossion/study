@@ -1,0 +1,155 @@
+Golang time包
+（一）概述：
+1、用法：import "time"
+2、time包作用是----提供了时间的显示和测量用的函数。日历的计算采用的是公历
+
+（二）time包中的类型及方法
+type Weekday
+        func (d Weekday) String() string
+type Month
+        func (m Month) String() string
+type Location
+        func LoadLocation(name string) (*Location, error)
+        func FixedZone(name string, offset int) *Location
+        func (l *Location) String() string
+type Time
+        func Date(year int, month Month, day, hour, min, sec, nsec int, loc *Location) Time
+        func Parse(layout, value string) (Time, error)
+        func ParseInLocation(layout, value string, loc *Location) (Time, error)
+        func Now() Time
+        func Unix(sec int64, nsec int64) Time
+        func (t Time) Location() *Location
+        func (t Time) Zone() (name string, offset int)
+        func (t Time) IsZero() bool
+        func (t Time) Local() Time
+        func (t Time) UTC() Time
+        func (t Time) In(loc *Location) Time
+        func (t Time) Unix() int64
+        func (t Time) UnixNano() int64
+        func (t Time) Equal(u Time) bool
+        func (t Time) Before(u Time) bool
+        func (t Time) After(u Time) bool
+        func (t Time) Date() (year int, month Month, day int)
+        func (t Time) Clock() (hour, min, sec int)
+        func (t Time) Year() int
+        func (t Time) Month() Month
+        func (t Time) ISOWeek() (year, week int)
+        func (t Time) YearDay() int
+        func (t Time) Day() int
+        func (t Time) Weekday() Weekday
+        func (t Time) Hour() int
+        func (t Time) Minute() int
+        func (t Time) Second() int
+        func (t Time) Nanosecond() int
+        func (t Time) Add(d Duration) Time
+        func (t Time) AddDate(years int, months int, days int) Time
+        func (t Time) Sub(u Time) Duration
+        func (t Time) Round(d Duration) Time
+        func (t Time) Truncate(d Duration) Time
+        func (t Time) Format(layout string) string
+        func (t Time) String() string
+        func (t Time) GobEncode() ([]byte, error)
+        func (t *Time) GobDecode(data []byte) error
+        func (t Time) MarshalBinary() ([]byte, error)
+        func (t *Time) UnmarshalBinary(data []byte) error
+        func (t Time) MarshalJSON() ([]byte, error)
+        func (t *Time) UnmarshalJSON(data []byte) error
+        func (t Time) MarshalText() ([]byte, error)
+        func (t *Time) UnmarshalText(data []byte) error
+type Duration
+        func ParseDuration(s string) (Duration, error)
+        func Since(t Time) Duration
+        func (d Duration) Hours() float64
+        func (d Duration) Minutes() float64
+        func (d Duration) Seconds() float64
+        func (d Duration) Nanoseconds() int64
+        func (d Duration) String() string
+type Timer
+        func NewTimer(d Duration) *Timer
+        func AfterFunc(d Duration, f func()) *Timer
+        func (t *Timer) Reset(d Duration) bool
+        func (t *Timer) Stop() bool
+type Ticker
+        func NewTicker(d Duration) *Ticker
+        func (t *Ticker) Stop()
+        func Sleep(d Duration)
+        func After(d Duration) <-chan Time
+        func Tick(d Duration) <-chan Time
+（三）time包中的核心方法介绍
+
+1.  func Now() Time
+        ·Now返回当前本地时间
+
+2.  func(t Time)Local()Tiime
+        ·Local将时间占城本地时区，但指向同一时间点的Time
+3.  func(t Time)UTC()Tiime
+        ·UTC将时间转成UTC和零时区，但指向同一时间点的Time
+        ·国际上通过英国伦敦格林威治天文天原址的那条经线称为0°经线，也叫本初子午线。
+4.  func Date(year int,month Month,day,hour,min,sec,nsec int,loc *location)Time
+        ·Date可以根据指定数值，返回一个世嘉。时区为Loc，时间格式：year-month-day hour:min:sec + nsecnanoseconds的时间点，
+          Loc可以使time.Local、time.UTC.
+    string转time
+5.  func Parse（layout，value string）（Time，error）
+        ·Parse能讲一个格式化的时间字符串解析成它所代表的时间，就是string->time
+        ·Layout定义了参考时间 ：Mao Jan 2 15:04:05 -0700 MST2006
+        ·如果缺少表示时区的信息，Parse会将数去设置为UTC。layout简写格式：Mon Jan 2 15:04:05 2006
+        ·预定义的ANSIC、UnixDate、RFC3339和其他办事描述了参考时间的标准或便捷表示
+6.  func(t Time)Format(layout string)string
+        ·Format根据layout指定的格式返回t代表的时间点的格式化文本表示。就是time->string
+        ·Layout定义了参考时间 ：Mao Jan 2 15:04:05 -0700 MST2006
+7.  func(t Time)string()string
+        ·String讲时间格式化成字符串（time转string，相当于是固定格式的Format方法），
+        格式为：“2006-01-02 15:04:05.999999999 -0700 MST”
+8.  func(t Time)Unix()int64
+        ·Unix将t表示为unix时间（时间戳，int64），即从时间点January1 1970到时间点t说经过的时间（单位：秒）
+9.  func(t Time)UnixNano()int64
+        ·UnixNano将t表示为unix时间（时间戳，int64），即从时间点January1 1970到时间点t说经过的时间（单位：纳秒）
+10. func(t Time)Equal(u Time)bool
+        ·判断两个时间是否相同，会考虑时区的影响，因此不同时区标准的时间也可以正确比较。本方法和用t==u不同，这种方法还会比较地点和时区信息
+11. func(t Time)Before(u Time)bool
+        ·如果t代表的时间在u之前，返回真；否则为假
+12. func(t Time)After(u Time)bool
+        ·如果t代表的时间在u之后，返回真；否则为假
+13. func(t Time)Date()(year int,nonth Month,day int)
+        ·返回时间点t对应的年月日
+14. func(t Time)Year()int
+        ·返回时间点t对应的年
+15. func(t Time)month()int
+        ·返回时间点t对应的月
+16. func(t Time)day()int
+        ·返回时间点t对应的日
+17. func(t Time)Weekday()int
+        ·返回时间点t对应的周
+18. func(t Time)Clock()int
+        ·返回时间点t对应的时、分、秒
+19. func(t Time)Hour()int
+        ·返回时间点t对应的 时，范围[0~23]
+20. func(t Time)Minute()int
+        ·返回时间点t对应的分，范围[0~59]
+21. func(t Time)Second()int
+        ·返回时间点t对应的秒，范围[0~59]
+22. func(t Time)NanoSecond()int
+        ·返回时间点t对应的秒，范围[0~999999999]
+23. func(t Time)Sub(u Time)Duration
+        ·返回一个时间段t-u。如果结果超出了Duration可以表示的最大/最小值，将返回最大或最小值，要回去时间点t-d（d 为Duration），可以使用t.ADD(-d)
+24. func(d Duration)Hours()float64
+        ·Hours将时间段表示为float64类型的小时数
+25. func(d Duration)Minutes()float64
+        ·Hours将时间段表示为float64类型的分钟数
+26. func(d Duration)Seconds()float64
+        ·Hours将时间段表示为float64类型的秒数
+27. func(d Duration)NanoSeconds()float64
+        ·Hours将时间段表示为float64类型的纳秒数，等价于int64（d）
+28. func(d Duration)String()string
+        ·返回时间段采用“72h3m0,5s”格式的字符串表示。最前面可以有符号，数子+单位作为一个单元，开始部分的0值单元会被省略；
+        如果时间段<1s,会使用ms、us、ns老保证第一个单元的数字不是0；如果时间段为0，会返回0。
+29. func ParseDuration(s string)(Duration,error)
+        ·ParseDuration解析一个时间段字符串。一个时间段字符串是一个序列，每个片段包含可选的正负号、十进制数、可选的小数
+        部分和单位后缀，如"300ms"\""-1.5h\"2h25m"。合法的单位有： ns us μs ms s m h
+
+30. func (t Time)Add(d Duration)Time
+        ·ADD返回时间t+d.
+31. func (t Time)AddDate(years int, months int,days int)Timw
+        ·AddDate返回增加了给出的年份、月份和天数的时间点Time。例如：时间点January 1,2011调用Adddate（-1,2,3）会返回March 4， 2010。
+        ·AddDate会将结果规范化，类似Date函数的做法。因此，举例：给时间点October 31添加一个月，会生成时间点December 1
+          （从时间点November31规范化而来的）

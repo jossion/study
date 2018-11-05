@@ -1,0 +1,65 @@
+（一）概述：
+1.list是一种非连续存储的容器，由多个节点组成，节点通过一些变量记录彼此之间的关系。list有多重实现方法，如：单向链表、双向链表。
+2.假设A、B、C三个都有电话号码，如果A把号码告诉B，B把号码告诉C，这个过程就建立了一个单向链表的结构；
+3.在单向链表的基础上，再从C开始，将自己的号码给告诉自己号码的人，这样就形成了双向链表结构。
+4.Go语言中的list的实现原理是双向链表。list能搞笑的进行任意位置的元素插入和删除操作。
+5.golang标准库提供了高级的数据结构List。具体的包在container/list。
+    a.container-》list包里主要有两个数据结构类型：“Element”“List”；
+    b.Element类型代表双向链表中的一个元素
+    c.list代表一个双向链表。list零值是一个空的、可用的链表。
+    d.Element有Prev and Next方法用于得到前一个或后一个Element，Element可以直接调用Value属性；
+    e.list的用法，请查看：https://www.strdygolang.com/pkgdoc
+6.list包中Element和list的核心方法：
+    （1）type Element:
+            func(e *Element)Next() *Element
+            func(e *Element)Prev() *Element
+    （2）type List
+            func New() * list   New创建一个链表
+
+            func(l *list)init() *list       init清空链表
+
+            func(l *list)Len() int          Len返回链表中元素的个数
+
+            func(l *list)Front() *Element   Front返回链表中第一个元素或nil
+
+            func(l *list)Back() *Element    Back返回链表中最后一个元素或nil
+
+            func(l *list)PushFront(v interface{}) *Element      PushFront将一个值为v的新元素插入链表的第一个位置，返回生成的新元素
+
+            func(l *list)PushFrontList(other *list)         添加另一个列表到开头。PushFrontList创建链表other的copy，并将拷贝的最后一个位置连接到链表l的第一个位置
+
+            func(l *list)PushBack(v interface{}) *Element   PushBack讲一个值为v的新元素掺入链表的最后一个位置。返回生成的新元素
+
+            func(l *list)PushBackList(other *list)      追加另一个列表到末尾。PushBack创建链表other的copy，并将链表l的最后一个位置连接到copy的第一个位置
+
+            func(l *list)insertBefore(v insterface{},mark *Element) *Element    InsertBefore将一个值为v的新元素插入到mark前面，并返回生成的新元素。如果mark不是l的元素，l不会被修改
+
+            func(l *list)insertAfter(v insterface{},mark *Element) *Element     InsertAfter将一个值为v的新元素插入到mark后面，并返回生成的新元素。如果mark不是l的元素，l不会被修改
+            func(1 *list)MoveToFront(e *Element)
+            func(1 *list)MoveToBack(e *Element)
+            func(1 *list)MoveToBefore(e *Element)
+            func(1 *list)MoveToAfter(e *Element)
+            func(l *list)Remove(e *Element)interface{}S
+
+
+（二）声明list的方式：New和list两种
+1.通过container/list包的New方法声明list
+            name := list.New()
+2.var name list.List
+    list与slice和map不同，没有具体元素类型的限制。list中的元素可以使任意类型
+    在C++里面，list的成员必须是同意个数据类型，但Go语言 中却允许list中插入任意类型的成员
+    建议：使用New（）实现声明
+
+（三）Element常用方法
+1.func(e *Element)Next() *Element   Next 返回链表的后一个元素或者nil
+2.func(e *Element)Prev() *Element   Prev 返回链表的前一个元素或者nil
+
+（四）遍历list
+1.顺序遍历：
+for e:=l.Front();e!=nil;e=e.Next(){
+    fmt.Print(e.Value,"")
+}
+2.逆序遍历：
+for e:=l.Back();e!=nil;e=e.Prev(){
+    fmt.Print(e.Value,"")
+}

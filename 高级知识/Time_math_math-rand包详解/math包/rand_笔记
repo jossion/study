@@ -1,0 +1,81 @@
+
+随机数（math/rand包）
+（一）概述
+1.rand包实现了伪随机数生成器
+2.随机数从资源生成，包水平的函数都使用的默认公共资源。该资源会在程序每次运行数都产生确定的序列。如果需要每次运行产生不同
+的序列，应使用Seed函数进行初始化，默认资源可以安全的用于多协程并发。
+
+（二）rand包中的类型和方法
+
+type Source  类型
+func NewSource(seed int64) Source
+
+type Rand
+func New(src Source) *Rand
+func (r *Rand) Seed(seed int64)
+func (r *Rand) Int() int
+func (r *Rand) Int31() int32
+func (r *Rand) Int63() int64
+func (r *Rand) Uint32() uint32
+func (r *Rand) Intn(n int) int
+func (r *Rand) Int31n(n int32) int32
+func (r *Rand) Int63n(n int64) int64
+func (r *Rand) Float32() float32
+func (r *Rand) Float64() float64
+func (r *Rand) NormFloat64() float64
+func (r *Rand) ExpFloat64() float64
+func (r *Rand) Perm(n int) []int
+type Zipf
+func NewZipf(r *Rand, s float64, v float64, imax uint64) *Zipf
+func (z *Zipf) Uint64() uint64
+func Seed(seed int64)
+func Int() int
+func Int31() int32
+func Int63() int64
+func Uint32() uint32
+func Intn(n int) int
+func Int31n(n int32) int32
+func Int63n(n int64) int64
+func Float32() float32
+func Float64() float64
+func NormFloat64() float64
+func ExpFloat64() float64
+func Perm(n int) []int
+
+（三）rand包中核心方法介绍
+1.func NewSource(seed int64)Source
+使用给定的种子创建一个伪随机资源
+2.func New(sec Source)*Rand
+返回一个使用src产生的随机数来生成其他各种分布的随机数值得*rand
+3.func(r *rand)Seed(seed int64)
+使用给定的seed来初始化生成器到一个确定的状态
+4.func(r *rand)int()int
+返回一个非负数的伪随机数int值
+5.func(r *rand)intn(n int)int
+返回一个取值范围在（0-n）的伪随机int值，如果n<=0会panic
+6.func(r *rand)float64()float64
+返回一个取值范围在（0.0-1.0）的伪随机float64值
+
+（四）回去随机数的几种方式
+1.通过默认随机数种子获取随机数
+        ·rand.int()
+        ·rand.Float64()
+        ·rand.intn(n)
+        ·总是生成固定的随机数。默认情况下，随机数种子都是1 。seed是一个64位整数
+
+2.动态随机数种子生成随机资源，实力随机对象来获取随机数
+        s1:=rand.NewSource(time.Now().UnixNano())
+        r1:=rand.New(s1)
+        randnum:=r1.intn(n)
+3.简写形式：动态变化随机数种子来获取随机数
+    （1）获取整形随机数[0,10]
+        ·rand.Seed(time.Now().UnixNano())
+        ·rand.intn(10)
+    （2）获取浮点型0.0-1.0之间的随机数
+        ·rand.Seed(time.Now().UnixNano())
+        rand.Float64()
+    （3）获取两个数之间随机数[m,n]
+        ·rand.Seed(time.Now().UnixNano())
+        ·随机数=rand.intn(n-m+1)+m
+        ·例如： 获取[5,11]之间的随机数：rand.intn(7)+5
+4.

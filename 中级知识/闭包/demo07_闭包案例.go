@@ -9,7 +9,7 @@ func main() {
 	fmt.Println("第一次\t res值是:\t", res())
 	fmt.Println("第二次\t res值是:\t", res())
 	fmt.Println("第三次\t res值是:\t", res())
-	res = Counter()
+	// res = Counter()
 	fmt.Println("第四次\t res值是:\t", res())
 	fmt.Println("第五次\t res值是:\t", res())
 	fmt.Println("第六次\t res值是:\t", res())

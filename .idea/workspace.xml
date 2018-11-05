@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da3ccdb0-a96d-4cb6-b4e2-a3531b4062fa" name="默认的" comment="" />
+    <list default="true" id="da3ccdb0-a96d-4cb6-b4e2-a3531b4062fa" name="默认的" comment="默认的">
+      <change afterPath="$PROJECT_DIR$/中级知识/指针例程/demo05_操作指针改变变量数值.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/中级知识/指针例程/demo06_指针作为函数参数.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/中级知识/指针例程/demo07_指针作为函数参数swap.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/中级知识/指针例程/demo08_切片参数作为函数参数.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/中级知识/函数/demo05_匿名函数作为回调函数.go" beforeDir="false" afterPath="$PROJECT_DIR$/中级知识/函数/demo05_匿名函数作为回调函数.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/中级知识/闭包/demo07_闭包案例.go" beforeDir="false" afterPath="$PROJECT_DIR$/中级知识/闭包/demo07_闭包案例.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/中级知识/闭包/demo08_闭包另类写法.go" beforeDir="false" afterPath="$PROJECT_DIR$/中级知识/闭包/demo08_闭包另类写法.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,41 +21,41 @@
     <session id="2067188210">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="discription for strings" value="1" />
-          <entry key="go" value="81" />
+          <entry key="go" value="86" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="81" />
+          <entry key="Go" value="86" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="discription for strings" value="1066" />
-          <entry key="go" value="13802" />
+          <entry key="go" value="14335" />
           <entry key="md" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="13802" />
+          <entry key="Go" value="14335" />
           <entry key="PLAIN_TEXT" value="1068" />
         </counts>
       </usages-collector>
@@ -61,13 +70,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/高级知识/05map/demo_map声明遍历.go">
+        <entry file="file://$PROJECT_DIR$/中级知识/指针例程/demo08_切片参数作为函数参数.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-              <folding>
-                <element signature="e#732#779#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="350">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -83,13 +89,12 @@
     </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ch1/demo_switch细节.go" />
-        <option value="$PROJECT_DIR$/基础知识/demo_switch细节.go" />
-        <option value="$PROJECT_DIR$/基础知识/demo_for循环.go" />
-        <option value="$PROJECT_DIR$/基础知识/demo_for嵌套.go" />
         <option value="$PROJECT_DIR$/基础知识/demo_循环控制.go" />
         <option value="$PROJECT_DIR$/中级知识/demo01_function.go" />
         <option value="$PROJECT_DIR$/中级知识/demo02_函数变量奇偶交替排列.go" />
@@ -137,6 +142,10 @@
         <option value="$PROJECT_DIR$/高级知识/04strings包常用函数/检索类函数/demo02_stringsFomat.go" />
         <option value="$PROJECT_DIR$/高级知识/03排序/demo_冒泡排序.go" />
         <option value="$PROJECT_DIR$/高级知识/05map/demo_map声明遍历.go" />
+        <option value="$PROJECT_DIR$/中级知识/指针例程/demo05_操作指针改变变量数值.go" />
+        <option value="$PROJECT_DIR$/中级知识/指针例程/demo06_指针作为函数参数.go" />
+        <option value="$PROJECT_DIR$/中级知识/指针例程/demo07_指针作为函数参数swap.go" />
+        <option value="$PROJECT_DIR$/中级知识/指针例程/demo08_切片参数作为函数参数.go" />
       </list>
     </option>
   </component>
@@ -191,13 +200,18 @@
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="高级知识" type="462c0819:PsiDirectoryNode" />
+              <item name="中级知识" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="中级知识" type="462c0819:PsiDirectoryNode" />
+              <item name="指针例程" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
               <item name="高级知识" type="462c0819:PsiDirectoryNode" />
-              <item name="05map" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
@@ -215,7 +229,7 @@
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/高级知识/04strings包常用函数/demo01_strings_基本用法.go" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.stylelint" value="project" />
@@ -249,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build demo_map声明遍历.go">
+  <component name="RunManager" selected="Go Build.go build demo06_指针作为函数参数.go">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="study" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -270,13 +284,24 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build demo06_闭包.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build demo05_操作指针改变变量数值.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="study" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/中级知识/闭包/demo06_闭包.go" />
+      <filePath value="$PROJECT_DIR$/中级知识/指针例程/demo05_操作指针改变变量数值.go" />
       <package value="study" />
       <directory value="$PROJECT_DIR$/" />
+      <option name="run" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build demo06_指针作为函数参数.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/中级知识/指针例程/demo06_指针作为函数参数.go" />
+      <package value="study" />
+      <directory value="$PROJECT_DIR$/" />
+      <option name="run" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="go build demo_参数传递01_int.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
@@ -308,37 +333,28 @@
       <option name="run" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="go build demo_slice创建空切片的最优方式.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="study" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/高级知识/02slice切片/demo_slice创建空切片的最优方式.go" />
-      <package value="study" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Go Build.go build demo_参数传递01_int.go" />
       <item itemvalue="Go Build.go build demo01_strings检索函数.go" />
-      <item itemvalue="Go Build.go build demo06_闭包.go" />
-      <item itemvalue="Go Build.go build demo_slice创建空切片的最优方式.go" />
       <item itemvalue="Go Build.go build demo_冒泡排序.go" />
       <item itemvalue="Go Build.go build demo_map声明遍历.go" />
+      <item itemvalue="Go Build.go build demo05_操作指针改变变量数值.go" />
+      <item itemvalue="Go Build.go build demo06_指针作为函数参数.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build demo06_指针作为函数参数.go" />
+        <item itemvalue="Go Build.go build demo05_操作指针改变变量数值.go" />
         <item itemvalue="Go Build.go build demo_map声明遍历.go" />
         <item itemvalue="Go Build.go build demo_冒泡排序.go" />
         <item itemvalue="Go Build.go build demo01_strings检索函数.go" />
-        <item itemvalue="Go Build.go build demo_slice创建空切片的最优方式.go" />
-        <item itemvalue="Go Build.go build demo06_闭包.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1616" height="916" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16323908" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1651671" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -371,13 +387,7 @@
     <entry file="file://$PROJECT_DIR$/ReadAllDir.go" />
     <entry file="file://$PROJECT_DIR$/getDir.go" />
     <entry file="file://$PROJECT_DIR$/human.go" />
-    <entry file="file://$PROJECT_DIR$/基础知识/demo_数据类型.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/基础知识/demo_数据类型.go" />
     <entry file="file://$PROJECT_DIR$/main.go" />
     <entry file="file://$PROJECT_DIR$/test_type/testtype.go" />
     <entry file="file://C:/Go/src/fmt/print.go">
@@ -387,13 +397,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/基础知识/demo_运算符.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="120" selection-start-line="120" selection-end-line="120" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/基础知识/demo_运算符.go" />
     <entry file="file://$PROJECT_DIR$/基础知识/demo_if控制语句.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -559,9 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="12" selection-start-column="12" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!block;n#AddSum#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -611,9 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#15#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -628,9 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-          <folding>
-            <element signature="e#14#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -645,19 +640,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#14#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/高级知识/05map/demo_map声明遍历.go">
+    <entry file="file://$PROJECT_DIR$/高级知识/05map/demo_map声明遍历.go" />
+    <entry file="file://$PROJECT_DIR$/中级知识/指针例程/demo05_操作指针改变变量数值.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="e#732#779#0" expanded="true" />
-          </folding>
+        <state>
+          <caret selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/中级知识/指针例程/demo06_指针作为函数参数.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/中级知识/指针例程/demo07_指针作为函数参数swap.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/中级知识/指针例程/demo04_空指针.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/中级知识/指针例程/demo08_切片参数作为函数参数.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
